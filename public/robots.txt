@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
+Sitemap: https://slaindia.vercel.app/sitemap.xml
 Sitemap: https://www.slaindia.com/sitemap.xml
