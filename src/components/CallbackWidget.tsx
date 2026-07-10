@@ -11,12 +11,18 @@ export default function CallbackWidget() {
     e.preventDefault();
     if (!phone || phone.length < 8) return;
 
+    const message = `Hello Shree Laxmi Associates, please call me back urgently within 15 minutes at my phone number: ${phone}`;
+    const whatsappUrl = `https://wa.me/919892116947?text=${encodeURIComponent(message)}`;
+
+    // Open WhatsApp alert directly to +919892116947
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+
     setSubmitted(true);
     setTimeout(() => {
       setSubmitted(false);
       setIsOpen(false);
       setPhone('');
-    }, 4000);
+    }, 6000);
   };
 
   return (
@@ -98,10 +104,18 @@ export default function CallbackWidget() {
                   <div className="w-14 h-14 bg-green-500/20 border border-green-500/40 rounded-full flex items-center justify-center mx-auto mb-4">
                     <CheckCircle2 size={32} className="text-green-400" />
                   </div>
-                  <h4 className="text-xl font-bold text-white mb-2">Callback Registered</h4>
-                  <p className="text-sm text-champagne/80 leading-relaxed">
-                    Our recovery executive has been alerted. Expect a call shortly from Shree Laxmi Associates.
+                  <h4 className="text-xl font-bold text-white mb-2">WhatsApp Alert Sent!</h4>
+                  <p className="text-sm text-champagne/80 leading-relaxed mb-5">
+                    Mr. Machhindra Pisal&apos;s office has been alerted on WhatsApp with your number (<strong className="text-gold">{phone}</strong>). Expect an executive call within 15 minutes.
                   </p>
+                  <a
+                    href={`https://wa.me/919892116947?text=${encodeURIComponent(`Hello Shree Laxmi Associates, please call me back urgently within 15 minutes at my phone number: ${phone}`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-[#25D366] text-white px-5 py-2.5 rounded-xl font-bold text-xs shadow-lg hover:brightness-110 transition-all"
+                  >
+                    <span>Click here if WhatsApp didn&apos;t open automatically</span>
+                  </a>
                 </div>
               )}
             </motion.div>
