@@ -1,16 +1,37 @@
-import { ShieldCheck, Lock, Send, Shield } from 'lucide-react';
-import { useState } from 'react';
+import { ShieldCheck, Lock, Send, Shield, ChevronDown } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
-export default function Footer() {
+interface FooterProps {
+  selectedLoan: string;
+  setSelectedLoan: (loan: string) => void;
+  initialMessage: string;
+  setInitialMessage: (msg: string) => void;
+}
+
+export default function Footer({ selectedLoan, setSelectedLoan, initialMessage, setInitialMessage }: FooterProps) {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
     email: '',
+    loanType: '',
     message: ''
   });
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  useEffect(() => {
+    if (selectedLoan) {
+      setFormData(prev => ({ ...prev, loanType: selectedLoan }));
+    }
+  }, [selectedLoan]);
+
+  useEffect(() => {
+    if (initialMessage) {
+      setFormData(prev => ({ ...prev, message: initialMessage }));
+    }
+  }, [initialMessage]);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -21,7 +42,7 @@ export default function Footer() {
     try {
       const formDataObj = new FormData(e.target as HTMLFormElement);
       // Add your Web3Forms Access Key (Passkey) here!
-      formDataObj.append("access_key", "b9157286-1b1c-4070-b301-9966975c39a4");
+      formDataObj.append("access_key", "e9420c67-ea8b-4379-9476-758988fbc895");
 
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
@@ -30,13 +51,18 @@ export default function Footer() {
 
       if (response.ok) {
         setStatus('success');
-        setFormData({ name: '', phone: '', email: '', message: '' }); // Clear form
+        setFormData({ name: '', phone: '', email: '', loanType: '', message: '' }); // Clear form
+        setSelectedLoan('');
+        setInitialMessage('');
         setTimeout(() => setStatus('idle'), 5000); // Reset status after 5s
       } else {
+        const data = await response.json();
+        setErrorMessage(data.message || 'Submission failed');
         setStatus('error');
         setTimeout(() => setStatus('idle'), 5000);
       }
     } catch (error) {
+      setErrorMessage(error instanceof Error ? error.message : 'An unexpected error occurred');
       setStatus('error');
       setTimeout(() => setStatus('idle'), 5000);
     }
@@ -151,6 +177,31 @@ export default function Footer() {
                 />
               </div>
 
+              <div className="relative">
+                <select 
+                  name="loanType" 
+                  required 
+                  value={formData.loanType}
+                  onChange={handleChange}
+                  className="w-full bg-dark/50 border border-white/10 rounded-xl px-4 py-3 text-champagne text-sm focus:outline-none focus:border-gold/50 transition-colors appearance-none cursor-pointer pr-10"
+                >
+                  <option value="" disabled className="bg-dark text-champagne/40">Enquiry Regarding</option>
+                  <option value="Home Loan" className="bg-dark text-champagne">Home Loan</option>
+                  <option value="Personal Loan" className="bg-dark text-champagne">Personal Loan</option>
+                  <option value="Business Loan" className="bg-dark text-champagne">Business Loan</option>
+                  <option value="Education Loan" className="bg-dark text-champagne">Education Loan</option>
+                  <option value="Vehicle Loan" className="bg-dark text-champagne">Vehicle Loan</option>
+                  <option value="Gold Loan" className="bg-dark text-champagne">Gold Loan</option>
+                  <option value="Loan Against Property" className="bg-dark text-champagne">Loan Against Property</option>
+                  <option value="Mortgage Loan" className="bg-dark text-champagne">Mortgage Loan</option>
+                  <option value="Car Loan" className="bg-dark text-champagne">Car Loan</option>
+                  <option value="Other Loan / Enquiry" className="bg-dark text-champagne">Other Loan / Enquiry</option>
+                </select>
+                <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-gold">
+                  <ChevronDown size={18} />
+                </div>
+              </div>
+
               <div>
                 <textarea 
                   name="message" 
@@ -178,7 +229,7 @@ export default function Footer() {
                 ) : status === 'success' ? (
                   'Message Sent Successfully!'
                 ) : status === 'error' ? (
-                  'Error! Please check Access Key.'
+                  errorMessage || 'Error occurred!'
                 ) : (
                   <>
                     <Send size={16} />

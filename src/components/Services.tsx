@@ -32,7 +32,11 @@ const services = [
   }
 ];
 
-export default function Services() {
+interface ServicesProps {
+  onSelectService: (title: string) => void;
+}
+
+export default function Services({ onSelectService }: ServicesProps) {
   return (
     <section id="services" className="py-16 lg:py-24 bg-dark relative">
       <div className="absolute top-0 left-0 w-full h-[500px] bg-burgundy/5 blur-[150px] pointer-events-none"></div>
@@ -54,6 +58,7 @@ export default function Services() {
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 1.2, delay: index * 0.15, ease: [0.22, 1, 0.36, 1] }}
                 whileHover={{ y: -15, scale: 1.02, transition: { duration: 0.2, ease: "easeOut" } }}
+                onClick={() => onSelectService(service.title)}
                 className="glass relative overflow-hidden rounded-2xl p-8 group border-t border-gold/20 hover:border-gold/60 transition-colors duration-300 cursor-pointer min-w-[85vw] snap-center md:min-w-0 md:w-auto"
               >
                 {/* Background Glow */}

@@ -11,7 +11,20 @@ const loans = [
   { id: 5, name: 'Vehicle Loan', icon: Car },
 ];
 
-export default function Loans() {
+const mapToDropdownValue = (name: string) => {
+  if (name.toLowerCase().includes('gold')) return 'Gold Loan';
+  if (name.toLowerCase().includes('car')) return 'Car Loan';
+  if (name.toLowerCase().includes('property')) return 'Loan Against Property';
+  if (name.toLowerCase().includes('fresh')) return 'Home Loan';
+  if (name.toLowerCase().includes('transfer')) return 'Home Loan';
+  return name;
+};
+
+interface LoansProps {
+  onSelectLoan: (type: string) => void;
+}
+
+export default function Loans({ onSelectLoan }: LoansProps) {
   const [expandedLoan, setExpandedLoan] = useState<number | null>(null);
 
   const mortgageSubTypes = [
@@ -60,9 +73,11 @@ export default function Loans() {
                 onClick={() => {
                   if (hasOptions) {
                     setExpandedLoan(isExpanded ? null : loan.id);
+                  } else {
+                    onSelectLoan(mapToDropdownValue(loan.name));
                   }
                 }}
-                className={`glass-dark p-8 rounded-2xl flex flex-col group border transition-all duration-300 shadow-lg ${isExpanded ? 'border-gold shadow-[0_15px_40px_rgba(212,161,94,0.3)] bg-gold/5 md:scale-[1.02] z-10' : 'border-white/10 hover:border-gold/40 hover:shadow-[0_15px_40px_rgba(212,161,94,0.15)]'} ${hasOptions ? 'cursor-pointer' : ''}`}
+                className={`glass-dark p-8 rounded-2xl flex flex-col group border transition-all duration-300 shadow-lg ${isExpanded ? 'border-gold shadow-[0_15px_40px_rgba(212,161,94,0.3)] bg-gold/5 md:scale-[1.02] z-10' : 'border-white/10 hover:border-gold/40 hover:shadow-[0_15px_40px_rgba(212,161,94,0.15)]'} cursor-pointer`}
               >
                 {/* Visible Card Content */}
                 <div className="flex items-center gap-6 w-full">
@@ -94,7 +109,14 @@ export default function Loans() {
                     >
                       <div className="pt-6 border-t border-gold/20 flex flex-col gap-3">
                         {(loan.name === 'Mortgage Loan' ? mortgageSubTypes : homeSubTypes).map((type, i) => (
-                          <div key={i} className="flex items-center gap-4 p-4 rounded-xl bg-dark/50 border border-white/5 hover:border-gold/30 hover:bg-gold/10 transition-colors group/item">
+                          <div 
+                            key={i} 
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              onSelectLoan(mapToDropdownValue(type));
+                            }}
+                            className="flex items-center gap-4 p-4 rounded-xl bg-dark/50 border border-white/5 hover:border-gold/30 hover:bg-gold/10 transition-colors group/item cursor-pointer"
+                          >
                             <div className="w-3 h-3 rounded-full border border-gold/50 group-hover/item:bg-gold shadow-[0_0_8px_rgba(212,161,94,0)] group-hover/item:shadow-[0_0_8px_rgba(212,161,94,1)] transition-all flex-shrink-0"></div>
                             <span className="text-sm font-bold text-champagne/80 group-hover/item:text-gold transition-colors">{type}</span>
                           </div>
@@ -135,7 +157,11 @@ export default function Loans() {
                   
                   <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full md:w-auto flex-1 justify-end">
                     {(loans.find(l => l.id === expandedLoan)?.name === 'Mortgage Loan' ? mortgageSubTypes : homeSubTypes).map((type, i) => (
-                      <div key={i} className="flex flex-col items-center justify-center p-6 rounded-2xl bg-dark/60 border border-white/5 hover:border-gold/50 hover:bg-gold/10 transition-all cursor-pointer group text-center gap-4">
+                      <div 
+                        key={i} 
+                        onClick={() => onSelectLoan(mapToDropdownValue(type))}
+                        className="flex flex-col items-center justify-center p-6 rounded-2xl bg-dark/60 border border-white/5 hover:border-gold/50 hover:bg-gold/10 transition-all cursor-pointer group text-center gap-4"
+                      >
                         <div className="w-10 h-10 rounded-full bg-dark flex items-center justify-center border border-gold/30 group-hover:scale-110 transition-transform shadow-inner">
                           <span className="w-2.5 h-2.5 rounded-full bg-gold shadow-[0_0_12px_rgba(212,161,94,1)]"></span>
                         </div>

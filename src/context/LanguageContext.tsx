@@ -15,7 +15,7 @@ export const translations: Translations = {
   'nav.home': { en: 'Home', mr: 'मुख्यपृष्ठ', hi: 'होम' },
   'nav.about': { en: 'About Us', mr: 'आमच्याबद्दल', hi: 'हमारे बारे में' },
   'nav.services': { en: 'Services', mr: 'सेवा', hi: 'सेवाएं' },
-  'nav.investments': { en: 'Investments', mr: 'गुंतवणूक', hi: 'निवेश' },
+  'nav.investments': { en: 'Finance', mr: 'फायनान्स', hi: 'फाइनेंस' },
   'nav.contact': { en: 'Contact', mr: 'संपर्क', hi: 'संपर्क करें' },
   
   // Hero
@@ -45,8 +45,8 @@ export const translations: Translations = {
   'about.multilingual': { en: 'Multilingual', mr: 'बहुभाषिक', hi: 'बहुभाषी' },
   'about.languages': { en: '4+ Languages', mr: '४+ भाषा', hi: '४+ भाषाएं' },
   'about.tag': { en: 'Our Legacy', mr: 'आमचा वारसा', hi: 'हमारी विरासत' },
-  'about.title': { en: '7+ Years of Financial Excellence', mr: '७+ वर्षांचे आर्थिक प्राविण्य', hi: '७+ वर्षों की वित्तीय उत्कृष्टता' },
-  'about.p1': { en: 'Founded by Mr. Machhindra Pisal, Shree Laxmi Associates brings over 7 years of relentless dedication to banking operations and recovery services.', mr: 'श्री मच्छिंद्र पिसाळ यांनी स्थापित केलेली श्री लक्ष्मी असोसिएट्स बँकिंग ऑपरेशन्स आणि रिकव्हरी सेवांमध्ये ७ वर्षांपेक्षा जास्त काळ अविरत समर्पण घेऊन आली आहे.', hi: 'श्री मच्छिंद्र पिसाल द्वारा स्थापित, श्री लक्ष्मी एसोसिएट्स बैंकिंग संचालन और रिकवरी सेवाओं में 7 से अधिक वर्षों का निरंतर समर्पण लाती है।' },
+  'about.title': { en: '3+ Years of Financial Excellence', mr: '३+ वर्षांचे आर्थिक प्राविण्य', hi: '३+ वर्षों की वित्तीय उत्कृष्टता' },
+  'about.p1': { en: 'Founded by Mr. Machhindra Pisal, Shree Laxmi Associates brings over 3 years of relentless dedication to banking operations and recovery services.', mr: 'श्री मच्छिंद्र पिसाळ यांनी स्थापित केलेली श्री लक्ष्मी असोसिएट्स बँकिंग ऑपरेशन्स आणि रिकव्हरी सेवांमध्ये ३ वर्षांपेक्षा जास्त काळ अविरत समर्पण घेऊन आली आहे.', hi: 'श्री मच्छिंद्र पिसाल द्वारा स्थापित, श्री लक्ष्मी एसोसिएट्स बैंकिंग संचालन और रिकवरी सेवाओं में 3 से अधिक वर्षों का निरंतर समर्पण लाती है।' },
   'about.p2': { en: "Our dynamic team of DRA-certified professionals and field officers across Mumbai's Central, Western, and Harbour lines ensures efficient, ethical resolution for top-tier corporate banks and financial institutions.", mr: 'मुंबईच्या मध्य, पश्चिम आणि हार्बर मार्गांवरील डीआरए-प्रमाणित व्यावसायिक आणि क्षेत्र अधिकाऱ्यांची आमची कार्यशील टीम सर्वोच्च कॉर्पोरेट बँका आणि आर्थिक संस्थांसाठी कार्यक्षम, नैतिक निराकरण सुनिश्चित करते.', hi: 'मुंबई के सेंट्रल, वेस्टर्न और हार्बर लाइनों में डीआरए-प्रमाणित पेशेवरों और फील्ड अधिकारियों की हमारी गतिशील टीम शीर्ष कॉर्पोरेट बैंकों और वित्तीय संस्थानों के लिए कुशल, नैतिक समाधान सुनिश्चित करती है।' },
   'about.box1.title': { en: 'Multilingual Negotiation', mr: 'बहुभाषिक वाटाघाटी', hi: 'बहुभाषी बातचीत' },
   'about.box1.desc': { en: 'Fluently communicating in English, Hindi, Marathi, etc. for amicable resolutions.', mr: 'सौहार्दपूर्ण निराकरणासाठी इंग्रजी, हिंदी, मराठी इत्यादी भाषांमध्ये अस्खलितपणे संवाद साधणे.', hi: 'सौहार्दपूर्ण समाधान के लिए अंग्रेजी, हिंदी, मराठी आदि में धाराप्रवाह संवाद करना।' },

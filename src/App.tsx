@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Lenis from 'lenis';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -21,6 +21,9 @@ import MobileNav from './components/MobileNav';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function App() {
+  const [selectedLoan, setSelectedLoan] = useState<string>('');
+  const [initialMessage, setInitialMessage] = useState<string>('');
+
   useEffect(() => {
     // Content Protection (Deterrence)
     const handleContextMenu = (e: MouseEvent) => e.preventDefault();
@@ -64,11 +67,28 @@ export default function App() {
         <About />
         <Founder />
         <WhyTrustUs />
-        <Services />
-        <Loans />
+        <Services onSelectService={(serviceTitle) => {
+          setInitialMessage(`Hello, I would like to enquire about your ${serviceTitle} services.`);
+          const contactSection = document.getElementById('contact');
+          if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        }} />
+        <Loans onSelectLoan={(type: string) => {
+          setSelectedLoan(type);
+          const contactSection = document.getElementById('contact');
+          if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        }} />
         <SecurityCompliance />
 
-        <Footer />
+        <Footer 
+          selectedLoan={selectedLoan} 
+          setSelectedLoan={setSelectedLoan} 
+          initialMessage={initialMessage}
+          setInitialMessage={setInitialMessage}
+        />
         <MobileNav />
       </div>
     </LanguageProvider>
