@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { X } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function Navbar() {
@@ -39,14 +39,14 @@ export default function Navbar() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className={`fixed left-0 right-0 z-50 flex justify-center transition-all duration-500 px-4 top-4 hidden md:flex`}
+        className={`fixed left-0 right-0 z-50 flex justify-center transition-all duration-500 px-3 sm:px-4 top-3 sm:top-4`}
       >
-        <nav className={`w-full max-w-6xl transition-all duration-500 flex justify-between items-center px-6 md:px-8 ${scrolled ? 'py-3 glass-dark rounded-full shadow-[0_20px_40px_rgba(0,0,0,0.6)] border border-gold/30' : 'py-2 bg-transparent'}`}>
+        <nav className={`w-full max-w-6xl transition-all duration-500 flex justify-between items-center px-4 sm:px-6 md:px-8 ${scrolled ? 'py-2 sm:py-3 glass-dark rounded-full shadow-[0_20px_40px_rgba(0,0,0,0.6)] border border-gold/30' : 'py-2.5 sm:py-3 bg-dark/80 sm:bg-transparent backdrop-blur-md sm:backdrop-blur-none rounded-full border border-gold/20 sm:border-transparent'}`}>
           <div className="flex items-center gap-3">
             <img
               src="/SLA_3.png"
               alt="SLA Logo"
-              className={`w-auto drop-shadow-md transition-all duration-500 ${scrolled ? 'h-10 md:h-12' : 'h-12 md:h-16'}`}
+              className={`w-auto drop-shadow-md transition-all duration-500 ${scrolled ? 'h-8 sm:h-10 md:h-11' : 'h-9 sm:h-10 md:h-12'}`}
             />
           </div>
 
@@ -57,32 +57,23 @@ export default function Navbar() {
                 <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gold transition-all duration-200 ease-out group-hover:w-full"></span>
               </a>
             ))}
-
-            {/* Language Toggle */}
-            <div className="flex items-center gap-2 ml-4 pl-6 border-l border-white/10">
-              {(['en', 'mr', 'hi'] as const).map((lang) => (
-                <button
-                  key={lang}
-                  onClick={() => setLanguage(lang)}
-                  className={`text-xs px-2 py-1 rounded transition-colors uppercase ${language === lang
-                    ? 'bg-gold text-champagne font-bold'
-                    : 'text-champagne/60 hover:text-champagne hover:bg-white/10'
-                    }`}
-                >
-                  {lang}
-                </button>
-              ))}
-            </div>
           </div>
 
-          {/* Mobile Menu Toggle */}
-          <button
-            className="md:hidden text-gold hover:text-champagne transition-colors"
-            onClick={() => setIsMobileMenuOpen(true)}
-            aria-label="Open Menu"
-          >
-            <Menu size={28} />
-          </button>
+          {/* Language Toggle (Visible on Mobile & Desktop) */}
+          <div className="flex items-center gap-1 sm:gap-2">
+            {(['en', 'mr', 'hi'] as const).map((lang) => (
+              <button
+                key={lang}
+                onClick={() => setLanguage(lang)}
+                className={`text-xs px-2 py-1 rounded transition-colors uppercase font-semibold ${language === lang
+                  ? 'bg-gold text-dark font-bold'
+                  : 'text-champagne/80 hover:text-champagne hover:bg-white/10'
+                  }`}
+              >
+                {lang}
+              </button>
+            ))}
+          </div>
         </nav>
       </motion.div>
 
