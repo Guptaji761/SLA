@@ -1,0 +1,21 @@
+{
+  "name": "Shree Laxmi Associates | Corporate Operations",
+  "short_name": "SLA India",
+  "description": "Empowering Financial Institutions. Your trusted partner for high-volume Debt Recovery, Field Verification, and Loan Sourcing across Mumbai.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#2A0D18",
+  "theme_color": "#2A0D18",
+  "icons": [
+    {
+      "src": "/SLA_3.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/SLA_3.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

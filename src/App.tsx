@@ -17,6 +17,7 @@ import Loans from './components/Loans';
 import SecurityCompliance from './components/SecurityCompliance';
 import Footer from './components/Footer';
 import MobileNav from './components/MobileNav';
+import CallbackWidget from './components/CallbackWidget';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -90,6 +91,7 @@ export default function App() {
           setInitialMessage={setInitialMessage}
         />
         <MobileNav />
+        <CallbackWidget />
       </div>
     </LanguageProvider>
   );
