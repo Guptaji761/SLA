@@ -81,7 +81,7 @@ export default function Footer({ selectedLoan, setSelectedLoan, initialMessage, 
               <img src="/SLA_3.png" alt="SLA Logo" loading="lazy" className="h-16 w-auto drop-shadow-md brightness-150" />
             </div>
             <p className="text-champagne/60 max-w-sm mb-8 leading-relaxed">
-              Your premium partner in wealth management, strategic financial advisory, and professional debt recovery across Mumbai.
+              Your premium partner in wealth management, strategic financial advisory, and professional debt recovery across India.
             </p>
             
             <div className="mb-8">
@@ -89,7 +89,7 @@ export default function Footer({ selectedLoan, setSelectedLoan, initialMessage, 
               <ul className="space-y-3 text-champagne/70">
                 <li className="flex items-start gap-3">
                   <span className="text-gold mt-1">📍</span>
-                  Mumbai
+                  Mumbai (HQ) | Pan-India Operations
                 </li>
                 <li className="flex items-center gap-3">
                   <span className="text-gold">📞</span>

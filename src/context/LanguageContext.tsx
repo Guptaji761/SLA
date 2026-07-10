@@ -22,9 +22,9 @@ export const translations: Translations = {
   'hero.title1': { en: 'Empowering Financial Institutions.', mr: 'आर्थिक संस्थांचे सक्षमीकरण.', hi: 'वित्तीय संस्थानों का सशक्तिकरण.' },
   'hero.title2': { en: 'Optimizing Operations.', mr: 'ऑपरेशन्स ऑप्टिमाइझ करणे.', hi: 'संचालन का अनुकूलन.' },
   'hero.subtitle': { 
-    en: 'Your trusted partner for high-volume Debt Recovery, Field Verification, and Loan Sourcing across Mumbai.', 
-    mr: 'मुंबईभरात उच्च-वॉल्यूम कर्ज वसुली, क्षेत्र पडताळणी आणि कर्ज सोर्सिंगसाठी आपला विश्वासार्ह भागीदार.', 
-    hi: 'मुंबई भर में उच्च मात्रा में ऋण वसूली, क्षेत्र सत्यापन और ऋण सोर्सिंग के लिए आपका विश्वसनीय भागीदार।' 
+    en: 'Your trusted partner for high-volume Debt Recovery, Field Verification, and Loan Sourcing across India.', 
+    mr: 'भारतभरात उच्च-वॉल्यूम कर्ज वसुली, क्षेत्र पडताळणी आणि कर्ज सोर्सिंगसाठी आपला विश्वासार्ह भागीदार.', 
+    hi: 'भारत भर में उच्च मात्रा में ऋण वसूली, क्षेत्र सत्यापन और ऋण सोर्सिंग के लिए आपका विश्वसनीय भागीदार।' 
   },
   'hero.btn.explore': { en: 'Explore Services', mr: 'सेवा एक्सप्लोर करा', hi: 'सेवाएं देखें' },
   'hero.btn.book': { en: 'Book Consultation', mr: 'सल्लामसलत बुक करा', hi: 'परामर्श बुक करें' },
@@ -40,14 +40,14 @@ export const translations: Translations = {
 
   // About
   'about.hq': { en: 'Headquarters', mr: 'मुख्यालय', hi: 'मुख्यालय' },
-  'about.location': { en: 'Mumbai', mr: 'मुंबई', hi: 'मुंबई' },
-  'about.reach': { en: '85% Market Reach', mr: '८५% बाजारातील पोहोच', hi: '८५% बाज़ार पहुंच' },
+  'about.location': { en: 'Mumbai | Pan-India Operations', mr: 'मुंबई | भारतभर ऑपरेशन्स', hi: 'मुंबई | अखिल भारतीय संचालन' },
+  'about.reach': { en: 'Pan-India Reach', mr: 'भारतभर पोहोच', hi: 'अखिल भारतीय पहुंच' },
   'about.multilingual': { en: 'Multilingual', mr: 'बहुभाषिक', hi: 'बहुभाषी' },
   'about.languages': { en: '4+ Languages', mr: '४+ भाषा', hi: '४+ भाषाएं' },
   'about.tag': { en: 'Our Legacy', mr: 'आमचा वारसा', hi: 'हमारी विरासत' },
-  'about.title': { en: '3+ Years of Financial Excellence', mr: '३+ वर्षांचे आर्थिक प्राविण्य', hi: '३+ वर्षों की वित्तीय उत्कृष्टता' },
-  'about.p1': { en: 'Founded by Mr. Machhindra Pisal, Shree Laxmi Associates brings over 3 years of relentless dedication to banking operations and recovery services.', mr: 'श्री मच्छिंद्र पिसाळ यांनी स्थापित केलेली श्री लक्ष्मी असोसिएट्स बँकिंग ऑपरेशन्स आणि रिकव्हरी सेवांमध्ये ३ वर्षांपेक्षा जास्त काळ अविरत समर्पण घेऊन आली आहे.', hi: 'श्री मच्छिंद्र पिसाल द्वारा स्थापित, श्री लक्ष्मी एसोसिएट्स बैंकिंग संचालन और रिकवरी सेवाओं में 3 से अधिक वर्षों का निरंतर समर्पण लाती है।' },
-  'about.p2': { en: "Our dynamic team of DRA-certified professionals and field officers across Mumbai's Central, Western, and Harbour lines ensures efficient, ethical resolution for top-tier corporate banks and financial institutions.", mr: 'मुंबईच्या मध्य, पश्चिम आणि हार्बर मार्गांवरील डीआरए-प्रमाणित व्यावसायिक आणि क्षेत्र अधिकाऱ्यांची आमची कार्यशील टीम सर्वोच्च कॉर्पोरेट बँका आणि आर्थिक संस्थांसाठी कार्यक्षम, नैतिक निराकरण सुनिश्चित करते.', hi: 'मुंबई के सेंट्रल, वेस्टर्न और हार्बर लाइनों में डीआरए-प्रमाणित पेशेवरों और फील्ड अधिकारियों की हमारी गतिशील टीम शीर्ष कॉर्पोरेट बैंकों और वित्तीय संस्थानों के लिए कुशल, नैतिक समाधान सुनिश्चित करती है।' },
+  'about.title': { en: '3+ Years of Financial Excellence Across India', mr: 'भारतभरात ३+ वर्षांचे आर्थिक प्राविण्य', hi: 'भारत भर में ३+ वर्षों की वित्तीय उत्कृष्टता' },
+  'about.p1': { en: 'Founded by Mr. Machhindra Pisal, Shree Laxmi Associates brings over 3 years of relentless dedication to banking operations and recovery services across India.', mr: 'श्री मच्छिंद्र पिसाळ यांनी स्थापित केलेली श्री लक्ष्मी असोसिएट्स भारतभरात बँकिंग ऑपरेशन्स आणि रिकव्हरी सेवांमध्ये ३ वर्षांपेक्षा जास्त काळ अविरत समर्पण घेऊन आली आहे.', hi: 'श्री मच्छिंद्र पिसाल द्वारा स्थापित, श्री लक्ष्मी एसोसिएट्स भारत भर में बैंकिंग संचालन और रिकवरी सेवाओं में 3 से अधिक वर्षों का निरंतर समर्पण लाती है।' },
+  'about.p2': { en: "Our dynamic team of DRA-certified professionals and field officers across Mumbai and financial hubs Pan-India ensures efficient, ethical resolution for top-tier corporate banks and financial institutions.", mr: 'मुंबई आणि भारतभरातील आर्थिक केंद्रांमधील डीआरए-प्रमाणित व्यावसायिक आणि क्षेत्र अधिकाऱ्यांची आमची कार्यशील टीम सर्वोच्च कॉर्पोरेट बँका आणि आर्थिक संस्थांसाठी कार्यक्षम, नैतिक निराकरण सुनिश्चित करते.', hi: 'मुंबई और भारत भर के प्रमुख वित्तीय केंद्रों में डीआरए-प्रमाणित पेशेवरों और फील्ड अधिकारियों की हमारी गतिशील टीम शीर्ष कॉर्पोरेट बैंकों और वित्तीय संस्थानों के लिए कुशल, नैतिक समाधान सुनिश्चित करती है।' },
   'about.box1.title': { en: 'Multilingual Negotiation', mr: 'बहुभाषिक वाटाघाटी', hi: 'बहुभाषी बातचीत' },
   'about.box1.desc': { en: 'Fluently communicating in English, Hindi, Marathi, etc. for amicable resolutions.', mr: 'सौहार्दपूर्ण निराकरणासाठी इंग्रजी, हिंदी, मराठी इत्यादी भाषांमध्ये अस्खलितपणे संवाद साधणे.', hi: 'सौहार्दपूर्ण समाधान के लिए अंग्रेजी, हिंदी, मराठी आदि में धाराप्रवाह संवाद करना।' },
   'about.box2.title': { en: 'Ethical Practices', mr: 'नैतिक पद्धती', hi: 'नैतिक प्रथाएं' },
