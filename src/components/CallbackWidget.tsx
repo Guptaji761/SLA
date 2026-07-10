@@ -81,6 +81,9 @@ export default function CallbackWidget() {
                       <div className="relative">
                         <input
                           type="tel"
+                          id="callback-phone"
+                          name="phone"
+                          autoComplete="tel"
                           value={phone}
                           onChange={(e) => setPhone(e.target.value)}
                           placeholder="+91 98765 43210"

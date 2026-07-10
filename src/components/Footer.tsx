@@ -144,7 +144,9 @@ export default function Footer({ selectedLoan, setSelectedLoan, initialMessage, 
                 <div>
                   <input 
                     type="text" 
+                    id="contact-name"
                     name="name" 
+                    autoComplete="name"
                     required 
                     value={formData.name}
                     onChange={handleChange}
@@ -155,7 +157,9 @@ export default function Footer({ selectedLoan, setSelectedLoan, initialMessage, 
                 <div>
                   <input 
                     type="tel" 
+                    id="contact-phone"
                     name="phone" 
+                    autoComplete="tel"
                     required 
                     value={formData.phone}
                     onChange={handleChange}
@@ -168,7 +172,9 @@ export default function Footer({ selectedLoan, setSelectedLoan, initialMessage, 
               <div>
                 <input 
                   type="email" 
+                  id="contact-email"
                   name="email" 
+                  autoComplete="email"
                   required 
                   value={formData.email}
                   onChange={handleChange}
