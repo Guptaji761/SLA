@@ -24,14 +24,14 @@ export default function About() {
               <div className="absolute inset-0 bg-gradient-to-tr from-burgundy/80 to-dark/50 z-10 mix-blend-overlay"></div>
               <img src="/mumbai-skyline.webp" alt="Mumbai Skyline" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
 
-              <div className="absolute bottom-8 left-8 right-8 z-20 glass-dark p-6 rounded-2xl">
+              <div className="absolute bottom-4 left-4 right-4 sm:bottom-8 sm:left-8 sm:right-8 z-30 bg-dark/95 backdrop-blur-md p-5 sm:p-6 rounded-2xl border border-gold/40 shadow-2xl">
                 <div className="flex items-center gap-4 mb-4">
-                  <div className="p-3 bg-gold/20 rounded-lg text-gold">
+                  <div className="p-3 bg-gold/20 rounded-lg text-gold flex-shrink-0">
                     <Building2 size={24} />
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold text-champagne">{t('about.hq')}</h4>
-                    <p className="text-champagne/60 text-sm">{t('about.location')}</p>
+                    <h4 className="text-lg sm:text-xl font-bold text-white block">{t('about.hq')}</h4>
+                    <p className="text-champagne/80 text-xs sm:text-sm block">{t('about.location')}</p>
                   </div>
                 </div>
                 <div className="h-2 w-full bg-dark rounded-full overflow-hidden">

@@ -35,9 +35,9 @@ export default function Founder() {
                 <div className="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent opacity-90"></div>
                 
                 {/* Floating Badge */}
-                <div className="absolute bottom-6 left-6 right-6 glass p-4 rounded-xl border border-gold/40 shiny-effect">
-                  <h3 className="text-xl font-bold text-champagne mb-1">Mr. Machhindra Pisal</h3>
-                  <p className="text-gold text-sm font-semibold tracking-wider uppercase">Founder & Managing Director</p>
+                <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 z-30 bg-dark/95 backdrop-blur-md p-4 sm:p-5 rounded-xl border border-gold/50 shadow-2xl">
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-1 block relative z-10">Mr. Machhindra Pisal</h3>
+                  <p className="text-gold text-xs sm:text-sm font-semibold tracking-wider uppercase block relative z-10">Founder & Managing Director</p>
                 </div>
               </div>
             </div>
