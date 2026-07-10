@@ -6,8 +6,8 @@ import * as THREE from 'three';
 function OrbitRings() {
   const ringsRef = useRef<THREE.Group>(null);
 
-  useFrame((state) => {
-    const t = state.clock.getElapsedTime();
+  useFrame(() => {
+    const t = performance.now() * 0.001;
     if (ringsRef.current) {
       ringsRef.current.rotation.x = Math.sin(t * 0.3) * 0.5;
       ringsRef.current.rotation.y = t * 0.2;
