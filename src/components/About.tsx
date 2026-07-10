@@ -20,10 +20,9 @@ export default function About() {
             transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
             className="w-full lg:w-1/2 relative"
           >
-            <div className="aspect-square relative rounded-3xl overflow-hidden border border-gold/20 shadow-[0_20px_50px_rgba(0,0,0,0.5)] group">
+            <div className="aspect-square relative rounded-3xl overflow-hidden border border-gold/20 shadow-[0_20px_50px_rgba(0,0,0,0.5)] group min-h-[300px]">
               <div className="absolute inset-0 bg-gradient-to-tr from-burgundy/80 to-dark/50 z-10 mix-blend-overlay"></div>
-              {/* Replace with actual 3D Mumbai skyline image later */}
-              <img src="https://images.unsplash.com/photo-1529253355930-ddbe423a2ac7?q=60&fm=webp&w=800&auto=format&fit=crop" alt="Mumbai Skyline" loading="lazy" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
+              <img src="/mumbai-skyline.webp" alt="Mumbai Skyline" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" />
 
               <div className="absolute bottom-8 left-8 right-8 z-20 glass-dark p-6 rounded-2xl">
                 <div className="flex items-center gap-4 mb-4">

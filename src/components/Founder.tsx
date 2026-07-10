@@ -26,13 +26,11 @@ export default function Founder() {
             className="w-full lg:w-5/12 relative"
           >
             <div className="relative rounded-2xl overflow-hidden border border-gold/30 p-2 glass-dark gold-glow luxury-shadow group">
-              <div className="relative rounded-xl overflow-hidden h-[400px] lg:h-[600px] w-full">
-                {/* Image Placeholder - A professional business portrait */}
+              <div className="relative rounded-xl overflow-hidden h-[380px] sm:h-[450px] lg:h-[600px] w-full">
                 <img 
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=60&fm=webp&w=800&auto=format&fit=crop" 
+                  src="/Machhindra.jpg" 
                   alt="Mr. Machhindra Pisal - Founder & MD" 
-                  loading="lazy"
-                  className="w-full h-[400px] lg:h-[600px] object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark via-transparent to-transparent opacity-90"></div>
                 
